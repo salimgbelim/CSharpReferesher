@@ -1,13 +1,10 @@
-using GradeBook.Tests.CommandPattern;
-using GradeBook.Tests.CommandPattern.After;
-using GradeBook.Tests.CommandPattern.Before;
 using Newtonsoft.Json;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace GradeBook.Tests.CompositePattern
 {
-    public partial class CompositePatternTests
+    public class CompositePatternTests
     {
         private readonly ITestOutputHelper _testOutputHelper;
 
@@ -58,14 +55,14 @@ namespace GradeBook.Tests.CompositePattern
             builder.AddFile("p1f4.txt", 5100);
 
             builder.SetCurrentDirectory("development");
-            
+
             builder.AddDirectory("project2");
             builder.AddFile("p2f1.txt", 6100);
             builder.AddFile("p2f2.txt", 7100);
-           
+
             // Act
             _testOutputHelper.WriteLine($"Total size (proj2) : {builder.Root.GetSizeInKb()}");
-       
+
             var jsonViewOfDirectoryAndFiles = JsonConvert.SerializeObject(builder.Root, Formatting.Indented);
             _testOutputHelper.WriteLine($"{jsonViewOfDirectoryAndFiles}");
         }
