@@ -24,9 +24,14 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Content Include="AdapterPattern\People.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestAssets\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Remove="AdapterPattern\People.json" />
+    <Content Include="AdapterPattern\People.json" />
   </ItemGroup>
 
 </Project>
