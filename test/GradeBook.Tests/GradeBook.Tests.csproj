@@ -33,5 +33,9 @@
     <None Remove="AdapterPattern\People.json" />
     <Content Include="AdapterPattern\People.json" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="ChainOfResponsibilityPattern\PaymentProcessing\Exceptions" />
+  </ItemGroup>
 
 </Project>
